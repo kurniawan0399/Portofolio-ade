@@ -1,23 +1,11 @@
-/* ============================================ */
-/* DATA GALERI FOTO PENGALAMAN                 */
-/* Ganti path file sesuai dengan lokasi foto   */
-/* ============================================ */
+// Data Gallery
 var galleryImages = [
-    { src: '3058.jpg.jpeg' },
-    { src: '2776.jpg.jpeg' },
-    { src: '360.jpg.jpeg' },
-    { src: '1746.jpg.jpeg' },
-    { src: '4429.jpg.jpeg' },
-    { src: '1438.jpg.jpeg' },
-    { src: '1152.jpg.jpeg' },
-    { src: '1592.jpg.jpeg' }
+    { src: '3058.jpg.jpeg' }, { src: '2776.jpg.jpeg' }, { src: '360.jpg.jpeg' }, { src: '1746.jpg.jpeg' },
+    { src: '4429.jpg.jpeg' }, { src: '1438.jpg.jpeg' }, { src: '1152.jpg.jpeg' }, { src: '1592.jpg.jpeg' }
 ];
-
 var currentIndex = 0;
 
-/* ============================================ */
-/* LIGHTBOX FUNCTIONS                          */
-/* ============================================ */
+// Lightbox Functions
 function openLightbox(index) {
     currentIndex = index;
     var lightbox = document.getElementById('lightbox');
@@ -44,7 +32,7 @@ function prevImage() {
     openLightbox(currentIndex);
 }
 
-// Keyboard navigation for lightbox
+// Event Listeners
 document.addEventListener('keydown', function(e) {
     if (document.getElementById('lightbox').classList.contains('active')) {
         if (e.key === 'Escape') closeLightbox();
@@ -53,26 +41,18 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
-// Close lightbox when clicking outside image
 document.getElementById('lightbox').addEventListener('click', function(e) {
     if (e.target === this) closeLightbox();
 });
 
-/* ============================================ */
-/* NAVBAR SCROLL EFFECT                        */
-/* ============================================ */
+// Navbar Scroll
 var navbar = document.querySelector('.navbar');
 window.addEventListener('scroll', function() {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
 });
 
-/* ============================================ */
-/* MOBILE MENU                                 */
-/* ============================================ */
+// Mobile Menu
 var menuBtn = document.getElementById('menuBtn');
 var closeMenu = document.getElementById('closeMenu');
 var mobileMenu = document.getElementById('mobileMenu');
@@ -87,7 +67,6 @@ closeMenu.addEventListener('click', function() {
     document.body.style.overflow = '';
 });
 
-// Close menu when clicking a link
 mobileMenu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() {
         mobileMenu.classList.remove('active');
@@ -95,15 +74,11 @@ mobileMenu.querySelectorAll('a').forEach(function(link) {
     });
 });
 
-/* ============================================ */
-/* REVEAL ANIMATION ON SCROLL                  */
-/* ============================================ */
+// Reveal Animation
 var reveals = document.querySelectorAll('.reveal');
 var revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('active');
     });
 }, { threshold: 0.1 });
 
@@ -111,17 +86,13 @@ reveals.forEach(function(el) {
     revealObserver.observe(el);
 });
 
-/* ============================================ */
-/* PROGRESS BAR ANIMATION                      */
-/* ============================================ */
+// Progress Bar
 var progressBars = document.querySelectorAll('.progress-bar');
 var progressObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
         if (entry.isIntersecting) {
             var width = entry.target.getAttribute('data-width');
-            if (width) {
-                entry.target.style.width = width + '%';
-            }
+            if (width) entry.target.style.width = width + '%';
         }
     });
 }, { threshold: 0.5 });
@@ -130,9 +101,7 @@ progressBars.forEach(function(bar) {
     progressObserver.observe(bar);
 });
 
-/* ============================================ */
-/* SMOOTH SCROLL FOR ANCHOR LINKS              */
-/* ============================================ */
+// Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -144,16 +113,13 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     });
 });
 
-/* ============================================ */
-/* CONTACT FORM HANDLER                        */
-/* ============================================ */
+// Contact Form
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var btn = this.querySelector('button[type="submit"]');
     var originalText = btn.textContent;
     btn.textContent = 'Pesan Terkirim!';
     btn.style.background = 'linear-gradient(135deg, #10B981 0%, #059669 100%)';
-    
     setTimeout(function() {
         btn.textContent = originalText;
         btn.style.background = '';
