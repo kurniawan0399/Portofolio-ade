@@ -3,7 +3,7 @@
 /* Ganti path file sesuai dengan lokasi foto   */
 /* ============================================ */
 var galleryImages = [
-    { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\3058.jpg.jpeg' },
+    { src: 'Portofolio-ade\\3058.jpg.jpeg' },
     { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\2776.jpg.jpeg' },
     { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\360.jpg.jpeg' },
     { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\1746.jpg.jpeg' },
