@@ -4,13 +4,13 @@
 /* ============================================ */
 var galleryImages = [
     { src: 'Portofolio-ade\\3058.jpg.jpeg' },
-    { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\2776.jpg.jpeg' },
-    { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\360.jpg.jpeg' },
-    { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\1746.jpg.jpeg' },
-    { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\4429.jpg.jpeg' },
-    { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\1438.jpg.jpeg' },
-    { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\1152.jpg.jpeg' },
-    { src: 'C:\\Users\\LENOVO\\OneDrive\\Dokumen\\porto\\foto\\1592.jpg.jpeg' }
+    { src: '2776.jpg.jpeg' },
+    { src: '360.jpg.jpeg' },
+    { src: '1746.jpg.jpeg' },
+    { src: '4429.jpg.jpeg' },
+    { src: '1438.jpg.jpeg' },
+    { src: '1152.jpg.jpeg' },
+    { src: '1592.jpg.jpeg' }
 ];
 
 var currentIndex = 0;
