@@ -4,12 +4,12 @@
 /* ============================================ */
 var galleryImages = [
     { src: 'Portofolio-ade\\3058.jpg.jpeg' },
+    { src: '3058.jpg.jpeg' },
     { src: '2776.jpg.jpeg' },
     { src: '360.jpg.jpeg' },
     { src: '1746.jpg.jpeg' },
     { src: '4429.jpg.jpeg' },
     { src: '1438.jpg.jpeg' },
-    { src: '1152.jpg.jpeg' },
     { src: '1592.jpg.jpeg' }
 ];
 
